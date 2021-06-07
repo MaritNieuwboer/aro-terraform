@@ -44,7 +44,13 @@ resource "azurerm_subnet" "master-subnet" {
     depends_on = [azurerm_resource_group.aro-rg, azurerm_virtual_network.aro-vn]
 }
 
-
-
-
+# Create worker subnet 
+resource "azurerm_subnet" "worker-subnet" {
+     name                 = var.worker_subnet_name
+     resource_group_name  = var.resource_group_name
+     virtual_network_name = var.vn_name
+     address_prefixes     = ["10.0.0.0/23"]
+ 
+     depends_on = [azurerm_resource_group.aro-rg, azurerm_virtual_network.aro-vn] 
+}
 

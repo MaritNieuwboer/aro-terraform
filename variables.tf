@@ -1,5 +1,5 @@
 variable "location" {
-  default = "westeurope"
+  default = "eastus"
   description = "name of the location" 
 }
 
@@ -21,5 +21,15 @@ variable "environment" {
 variable "vn_name" {
     default = "aro-vn"
     description = "name of the virtual network" 
+}
+
+variable "master_subnet_name" {
+    default = "master-subnet"
+    description = "name of the master subnet"
+}
+
+variable "worker_subnet_name" {
+    default = "worker-subnet"
+    description = "name of the worker subnet" 
 }
 
