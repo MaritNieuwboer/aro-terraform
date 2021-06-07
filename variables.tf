@@ -4,7 +4,7 @@ variable "location" {
 }
 
 variable "resource_group_name" {
-  default = "aro-rg-marit"
+  default = "aro-rg"
   description = "name of the resource group"
 }
 
