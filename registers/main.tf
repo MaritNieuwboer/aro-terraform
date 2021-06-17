@@ -1,24 +1,16 @@
 #Provide registers
-resource "null_resource" "provide_aro" {
-provisioner "local-exec" {
-  command = "az provider register -n Microsoft.RedHatOpenShift --wait"
-  } 
+resource "azurerm_resource_provider_registration" "provide_aro" {
+   name = "Microsoft.RedHatOpenshift" 
 }
 
-resource "null_resource" "provide_compute" {
-provisioner "local-exec" {
-   command = "az provider register -n Microsoft.Compute --wait"
-  }
+resource "azurerm_resource_provider_registration" "provide_compute" { 
+   name = "Microsoft.Compute"                             
+}                                                                 
+
+resource "azurerm_resource_provider_registration" "provide_storage" {
+   name = "Microsoft.Storage"
 }
 
-resource "null_resource" "provide_storage" {
-provisioner "local-exec" {
-    command = "az provider register -n Microsoft.Storage --wait"
-   } 
-}
-
-resource "null_resource" "provide_authorization" {
-provisioner "local-exec" {
-     command = "az provider register -n Microsoft.Authorization --wait"
-    } 
-}
+resource "azurerm_resource_provider_registration" "provide_authorization" {
+   name = "Microsoft.Authorization"
+}                                                                    
