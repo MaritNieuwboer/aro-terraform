@@ -1,6 +1,6 @@
 #Provide registers
 resource "azurerm_resource_provider_registration" "provide_aro" {
-   name = "Microsoft.RedHatOpenshift" 
+   name = "Microsoft.RedHatOpenShift" 
 }
 
 resource "azurerm_resource_provider_registration" "provide_compute" { 
