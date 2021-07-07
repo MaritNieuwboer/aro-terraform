@@ -3,7 +3,7 @@ Testing a terraform script to create aro cluster.
 First version without pull secret and custom domain. 
 
 Steps:
-1. Create storage acount on Azure Portal for tfstate (seperate from Terraform because Terraform uses it as backend) 
+1. Create storage acount on Azure Portal for tfstate (seperate from Terraform because Terraform uses it as backend) https://docs.microsoft.com/en-us/azure/developer/terraform/store-state-in-azure-storage
 2. Authenticate with Service principal (create in Azure) https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/service_principal_client_secret
 3. Create local tfvars (put in .gitignore) to use sensitive values or use environment variables (whatever fits best)
 4. Terraform init
